@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1battletab001"]
+
+[ext_resource type="PackedScene" uid="uid://b1mudheader001" path="res://ui/components/MudHeader.tscn" id="1"]
+[ext_resource type="Script" path="res://ui/tabs/BattleTab.gd" id="2"]
+
+[node name="BattleTab" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" parent="VBoxContainer" instance=ExtResource("1")]
+title_text = "[战斗] 遭遇怪物"
+
+[node name="MonsterInfo" type="Label" parent="VBoxContainer"]
+text = "当前没有战斗"
+autowrap_mode = 2
+
+[node name="PlayerInfo" type="Label" parent="VBoxContainer"]
+text = "你的气血：100/100"
+
+[node name="ButtonRow" type="HBoxContainer" parent="VBoxContainer"]
+
+[node name="AttackBtn" type="Button" parent="VBoxContainer/ButtonRow"]
+custom_minimum_size = Vector2(150, 30)
+text = "[攻击] 普通攻击"
+
+[node name="HeavyBtn" type="Button" parent="VBoxContainer/ButtonRow"]
+custom_minimum_size = Vector2(200, 30)
+text = "[重击] 2倍伤害50%命中"
+
+[node name="FleeBtn" type="Button" parent="VBoxContainer/ButtonRow"]
+custom_minimum_size = Vector2(100, 30)
+text = "[逃跑] 脱离战斗"

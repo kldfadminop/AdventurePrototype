@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1camptab0001"]
+
+[ext_resource type="PackedScene" uid="uid://b1mudheader001" path="res://ui/components/MudHeader.tscn" id="1"]
+[ext_resource type="Script" path="res://ui/tabs/CampTab.gd" id="2"]
+
+[node name="CampTab" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" parent="VBoxContainer" instance=ExtResource("1")]
+title_text = "[营地] 休息与背包"
+
+[node name="RestBtn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+text = "[休息] 恢复体力"
+
+[node name="InvTitle" type="Label" parent="VBoxContainer"]
+text = "[背包] 物品列表"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="InvContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
