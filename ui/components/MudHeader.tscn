@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1mudheader001"]
+
+[ext_resource type="Script" path="res://ui/components/MudHeader.gd" id="1"]
+
+[node name="MudHeader" type="Label"]
+custom_minimum_size = Vector2(0, 30)
+horizontal_alignment = 1
+text = "标题"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 0.8, 0.4, 1)
+script = ExtResource("1")

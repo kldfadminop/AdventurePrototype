@@ -1,0 +1,101 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1statusbar001"]
+
+[ext_resource type="Script" path="res://ui/components/StatusBar.gd" id="1"]
+
+[node name="StatusBar" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 80)
+script = ExtResource("1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+
+[node name="TopRow" type="HBoxContainer" parent="VBoxContainer"]
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer/TopRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "等级:1"
+
+[node name="AtkLabel" type="Label" parent="VBoxContainer/TopRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "攻击:5"
+
+[node name="DefLabel" type="Label" parent="VBoxContainer/TopRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "防御:2"
+
+[node name="GoldLabel" type="Label" parent="VBoxContainer/TopRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "金币:10"
+
+[node name="ButtonRow" type="HBoxContainer" parent="VBoxContainer/TopRow"]
+alignment = 2
+
+[node name="SaveBtn" type="Button" parent="VBoxContainer/TopRow/ButtonRow"]
+custom_minimum_size = Vector2(100, 25)
+text = "[存档] 手动存档"
+
+[node name="ResetBtn" type="Button" parent="VBoxContainer/TopRow/ButtonRow"]
+custom_minimum_size = Vector2(100, 25)
+text = "[重置] 重置游戏"
+
+[node name="BarsGrid" type="GridContainer" parent="VBoxContainer"]
+columns = 2
+
+[node name="HpRow" type="HBoxContainer" parent="VBoxContainer/BarsGrid"]
+
+[node name="HpLabel" type="Label" parent="VBoxContainer/BarsGrid/HpRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "气血:100/100"
+
+[node name="HpBar" type="ProgressBar" parent="VBoxContainer/BarsGrid/HpRow"]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(300, 15)
+max_value = 100.0
+value = 100.0
+
+[node name="StaRow" type="HBoxContainer" parent="VBoxContainer/BarsGrid"]
+
+[node name="StaLabel" type="Label" parent="VBoxContainer/BarsGrid/StaRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "体力:100/100"
+
+[node name="StaBar" type="ProgressBar" parent="VBoxContainer/BarsGrid/StaRow"]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(300, 15)
+max_value = 100.0
+value = 100.0
+
+[node name="HungerRow" type="HBoxContainer" parent="VBoxContainer/BarsGrid"]
+
+[node name="HungerLabel" type="Label" parent="VBoxContainer/BarsGrid/HungerRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "饱食:100/100"
+
+[node name="HungerBar" type="ProgressBar" parent="VBoxContainer/BarsGrid/HungerRow"]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(300, 15)
+max_value = 100.0
+value = 100.0
+
+[node name="ThirstRow" type="HBoxContainer" parent="VBoxContainer/BarsGrid"]
+
+[node name="ThirstLabel" type="Label" parent="VBoxContainer/BarsGrid/ThirstRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "饮水:100/100"
+
+[node name="ThirstBar" type="ProgressBar" parent="VBoxContainer/BarsGrid/ThirstRow"]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(300, 15)
+max_value = 100.0
+value = 100.0
+
+[node name="ExpRow" type="HBoxContainer" parent="VBoxContainer/BarsGrid"]
+
+[node name="ExpLabel" type="Label" parent="VBoxContainer/BarsGrid/ExpRow"]
+custom_minimum_size = Vector2(80, 0)
+text = "经验:0/50"
+
+[node name="ExpBar" type="ProgressBar" parent="VBoxContainer/BarsGrid/ExpRow"]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(300, 15)
+max_value = 50.0
+value = 0.0
